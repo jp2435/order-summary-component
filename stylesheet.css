@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    /* Primary Color */
+    --pri-pale-blue: hsl(255,100%,94%);
+    --pri-bright-blue: hsl(245,75%,52%);
+
+    /* Neutral Color */
+    --neu-very-pale-blue: hsl(225, 100%, 98%);
+    --neu-desaturated-blue: hsl(224,23%,55%);
+    --neu-dark-blue: hsl(223,47%,23%);
+
+    --ff: 'Red Hat Display', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(images/pattern-background-mobile.svg), var(--pri-pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    display: grid;
+    /* Shorthand property for align-items and justify-items */
+    place-items: center;
+    font-family: var(--ff);
+}
+
+#card{
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px 0 hsla(245,75%,52%,.11);
+    overflow: hidden;
+    max-width: 27.5rem;
+    margin: 0 1.5em;
+}
+#card-image img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card-body{
+    text-align: center;
+}
+
+#title{
+    color: var(--neu-dark-blue);
+    font-size: 1.4rem;
+    font-weight: 900;
+    padding: 1.3em 0 .8em 0;
+}
+.text{
+    color: var(--neu-desaturated-blue);
+    line-height: 1.6;
+    font-size: .95rem;
+}
+
+.plan-box{
+    background: var(--neu-very-pale-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.5em 1.5em 1.5em;
+    padding: 1em;
+    border-radius: 10px;
+}
+.plan-box-left{
+    display: flex;
+}
+.plan-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.2em;
+    gap: .2em;
+    text-align: left;
+    font-size: .7rem;
+}
+.plan-details h3{
+    color: var(--neu-dark-blue);
+    font-size: .9rem;
+}
+.plan-details p{
+    color: var(--neu-desaturated-blue);
+    font-size: .8rem;
+}
+
+.plan-box-right a{
+    color: var(--pri-bright-blue);
+    font-weight: 700;
+    font-size: .8rem;
+    opacity: 1;
+    transition: all .2s ease;
+}
+.plan-box-right a:hover{
+    opacity: .8s;
+}
+.plan-box-right a:focus{
+    outline: 3px dotted var(--neu-desaturated-blue);
+}
+.plan-box-right a:focus:not(:focus-visible){
+    outline: none;
+}
+.plan-box-right a:focus-visible{
+    outline: 3px dotted var(--neu-desaturated-blue);
+}
+
+
+/* Buttons */
+.button-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: .65em;
+    margin-bottom: 1.5em;
+}
+
+.btn{
+    all: unset;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: .95rem;
+    font-weight: 700;
+    margin: 0 1.5em;
+    padding: 1em;
+}
+.btn:focus{
+    outline: 3px dashed var(--neu-desaturated-blue);
+}
+.btn:focus:not(:focus-visible){
+    outline: none;
+}
+.btn:focus-visible{
+    outline: 3px dashed var(--neu-desaturated-blue);
+}
+
+.payment-btn{
+    background: var(--pri-bright-blue);
+    color: white;
+    box-shadow: 0 15px 20px 0 hsla(245,75%,52%,.25);
+    opacity: 1;
+    transition: all .2s ease;
+}
+.payment-btn:hover{
+    opacity: .8;
+}
+
+.cancel-btn{
+    color: var(--neu-desaturated-blue);
+    transition: color .2s ease;
+}
+.cancel-btn:hover{
+    color: var(--neu-dark-blue);
+}
+
+/* End buttons */
+
+@media (min-width: 450px){
+    body{
+        background: url(images/pattern-background-desktop.svg), var(--pri-pale-blue);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    #title{
+        font-size: 1.7rem;
+        padding-top: 1.7em;
+        padding-bottom: .7em;
+    }
+    .text{
+        font-size: 1.05rem;
+        padding: 0 3em;
+    }
+    .plan-box{
+        margin: 0 3em 2em 3em;
+        padding: 1.5em;
+    }
+    .plan-details h3, .plan-details p{
+        font-size: 1.05rem;
+    }
+    .plan-box-right a{
+        font-size: .9rem;
+    }
+    .btn{
+        margin: 0 3em;
+    }
+}

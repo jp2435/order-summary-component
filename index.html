@@ -8,6 +8,7 @@
   
   <title>Frontend Mentor | Order summary card</title>
 
+  <link rel="stylesheet" href="stylesheet.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,23 +16,47 @@
   </style>
 </head>
 <body>
+  <main>
+      <article id="card">
+        <div id="card-image">
+          <img src="./images/illustration-hero.svg" alt="">
+        </div>
 
-  Order Summary
+        <div class="card-body">
+          <h1 id="title">Order Summary</h1>
+          
+          <p class="text">You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!</p>
+          
+          <div class="plan-box">
+            <div class="plan-box-left">
+              <img src="./images/icon-music.svg" alt="" aria-hidden="true">
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+              <div class="plan-details">
+                <h3>Annual Plan</h3>
+                <p>$59.99/year</p>
+              </div>
 
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
+            </div>
+            <div class="plan-box-right">
+              <a href="#">Change</a>
+            </div>
+          </div>
+      
+        </div>
+    
+        <div class="button-holder">
+          <button class="btn payment-btn">Procedd to Payment</button>
+          <button class="btn cancel-btn">Cancel Order</button>
+        </div>
+      </article>
+    </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">jp2435</a>.
-  </div>
+  <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/jp2435">jp2435</a>.
+      </div>
+  </footer>
 </body>
 </html>
